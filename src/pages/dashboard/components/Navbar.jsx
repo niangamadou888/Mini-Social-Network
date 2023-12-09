@@ -11,6 +11,9 @@ import Menu from '@mui/material/Menu';
 import { useNavigate } from 'react-router';
 
 export default function Navbar() {
+
+  const navigate = useNavigate();
+  
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleChange = (event) => {
