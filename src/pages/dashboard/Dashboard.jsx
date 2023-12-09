@@ -18,7 +18,7 @@ export default function Dashboard() {
     const queryClient = useQueryClient();
     const {data:publications, error, isLoading} = useQuery({
         queryKey: ["publications"],
-        queryFn: () => axios.get("http://localhost:5555/publications").then((res) => res.data),
+        queryFn: () => axios.get("https://mini-social-network.onrender.com/publications").then((res) => res.data),
         onerror: (error) => console.log(error),
     })
     if (isLoading){
