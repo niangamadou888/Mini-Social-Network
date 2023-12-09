@@ -20,8 +20,6 @@ app.get('/', (req,res) =>{
 
 app.use('/users', userRoutes);
 app.use('/publications', publicationRoutes);
-const mongoUri = process.env.MONGODBURL;
-console.log(mongoUri);
 
 mongoose
     .connect(MONGODBURL)
