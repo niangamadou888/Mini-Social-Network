@@ -20,7 +20,7 @@ export default function Connexion() {
     const onSubmit = (data) => {
         axios
             .get(
-                `http://localhost:5555/users/userExist/${data.mailUtilisateur}&${data.motDePasse}`
+                `https://mini-social-network.onrender.com/users/userExist/${data.mailUtilisateur}&${data.motDePasse}`
             )
             .then(res => {
                 if (res.data > 0) {
