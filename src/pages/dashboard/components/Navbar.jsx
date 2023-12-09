@@ -76,7 +76,7 @@ export default function Navbar() {
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={deconnection}>Deconnection</MenuItem>
+                <MenuItem onClick={deconnection}>Deconnexion</MenuItem>
               </Menu>
             </div>
         </Toolbar>
