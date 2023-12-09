@@ -58,9 +58,7 @@ export default function AjouterPublication() {
                 message: "Veuillez saisir un texte de plus de 5 caracteres",
             }
         })} />
-        <TextField id="filled-basic" label="Saisir l'URL de votre image" variant="outlined" fullWidth size="small" type="text" {...register("imagePublication", {
-            required: "Veuillez saisir une url",
-        })} />
+        <TextField id="filled-basic" label="Saisir l'URL de votre image" variant="outlined" fullWidth size="small" type="text" {...register("imagePublication")} />
         <Button variant="contained" type="submit">Publier</Button>
         </Stack>
     </form>
