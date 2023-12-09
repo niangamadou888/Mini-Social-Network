@@ -51,14 +51,14 @@ export default function AjouterPublication() {
     onSubmit={handleSubmit(onSubmit)}
     >
         <Stack gap={2}>
-        <TextField id="filled-basic" label="Partagez-nous de votre journée" variant="outlined" fullWidth size="small" type="text" multiline rows={4} {...register("textPublication", {
+        <TextField id="text-field" label="Partagez-nous de votre journée" variant="outlined" fullWidth size="small" type="text" multiline rows={4} {...register("textPublication", {
             required: "Veuillez saisir un texte",
             minLength: {
                 value: 10,
                 message: "Veuillez saisir un texte de plus de 5 caracteres",
             }
         })} />
-        <TextField id="filled-basic" label="Saisir l'URL de votre image" variant="outlined" fullWidth size="small" type="text" {...register("imagePublication")} />
+        <TextField id="image-url-field" label="Saisir l'URL de votre image" variant="outlined" fullWidth size="small" type="text" {...register("imagePublication")} />
         <Button variant="contained" type="submit">Publier</Button>
         </Stack>
     </form>
