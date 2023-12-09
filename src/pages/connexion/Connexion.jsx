@@ -7,7 +7,11 @@ import { useNavigate } from 'react-router';
 
 export default function Connexion() {
     
+    const navigate = useNavigate();
 
+    const inscription = () =>{
+        navigate("/inscription");
+      }
 
 
     const navigate = useNavigate();
@@ -46,7 +50,7 @@ export default function Connexion() {
             </Stack>
             <Button variant="contained" sx={{marginTop:2,}} type='submit'>Connexion</Button>
             <Typography paddingTop={2}>Voulez-vous creer un compte ?{" "}
-            <Link href="/inscription">Cliquez ici</Link>
+            <Link onClick={inscription}>Cliquez ici</Link>
             </Typography>
         </form>
         </Box>
