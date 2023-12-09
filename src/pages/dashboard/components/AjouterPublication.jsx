@@ -25,7 +25,6 @@ export default function AjouterPublication() {
         },
         onError: (error) => {
             toast.error(`Une erreur est survenue`);
-            console.log(error);
         },
         onSuccess: () =>{
             reset();
