@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { useNavigate } from 'react-router';
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -26,7 +27,7 @@ export default function Navbar() {
 
   const deconnection = () =>{
     localStorage.removeItem("utilisateur");
-    window.location.replace("/connexion");
+    navigate("/connexion");
   }
 
   return (
