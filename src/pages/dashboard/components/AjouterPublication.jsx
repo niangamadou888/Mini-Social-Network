@@ -24,7 +24,8 @@ export default function AjouterPublication() {
           return axios.post('https://mini-social-network.onrender.com/publications', pub)
         },
         onError: (error) => {
-            toast.error("Une erreur est survenue");
+            toast.error(`Une erreur est survenue`);
+            console.log(error);
         },
         onSuccess: () =>{
             reset();
