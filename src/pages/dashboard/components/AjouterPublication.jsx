@@ -10,7 +10,7 @@ export default function AjouterPublication() {
     const [user, setUser] = useState({});
 
     useEffect( ()=>{
-        axios.get(`http://localhost:5555/users/mail/${parsedInfo.mailUtilisateur}`).then(
+        axios.get(`https://mini-social-network.onrender.com/users/mail/${parsedInfo.mailUtilisateur}`).then(
             response => {setUser(response.data[0])}
         );
     },[]);
@@ -21,7 +21,7 @@ export default function AjouterPublication() {
     const useQuery = useQueryClient();
     const mutation = useMutation({
         mutationFn: (pub) => {
-          return axios.post('http://localhost:5555/publications', pub)
+          return axios.post('https://mini-social-network.onrender.com/publications', pub)
         },
         onError: (error) => {
             toast.error("Une erreur est survenue");
