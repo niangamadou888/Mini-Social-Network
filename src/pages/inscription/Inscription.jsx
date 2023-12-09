@@ -12,13 +12,13 @@ export default function Inscription() {
         if (data.motDePasse != data.motDePasseConfirmation){
             toast.error("Les mots de passe ne correspondent pas");
         } else {
-            axios.get(`http://localhost:5555/users/mails/${data.mailUtilisateur}`)
+            axios.get(`https://mini-social-network.onrender.com/users/mails/${data.mailUtilisateur}`)
             .then((res) =>{
                 if (res.data>0){
                     toast.error("Un compte existe déja avec cette adresse mail");
                 } else {
                     axios
-            .post("http://localhost:5555/users", data)
+            .post("https://mini-social-network.onrender.com/users", data)
             .then((res) => {
                 toast.success("Inscription reussie");
                 navigate("/connexion");
