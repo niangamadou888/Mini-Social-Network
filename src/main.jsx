@@ -16,13 +16,14 @@ const router =  createBrowserRouter([
     element: <Dashboard />
   },
   {
-    path:"/connexion",
-    element: <Connexion />
-  },
-  {
     path:"/inscription",
     element: <Inscription />
   },
+  {
+    path:"/connexion",
+    element: <Connexion />
+  }
+  
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
