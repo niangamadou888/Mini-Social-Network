@@ -7,11 +7,10 @@ const router = express.Router();
 router.post('/', async (req, res) => {
     try{
         if (
-            !req.body.textPublication ||
-            !req.body.imagePublication
+            !req.body.textPublication
         ) {
             return res.status(400).send({
-                message: 'Send all required fields: textPublication, imagePublication'
+                message: 'Send all required fields: textPublication'
             });
         }
         const newPublication = {
