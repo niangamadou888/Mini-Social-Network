@@ -11,7 +11,7 @@ export default function CartePub({publication}) {
     const [user, setUser] = useState({});
 
     useEffect( ()=>{
-        axios.get(`http://localhost:5555/users/mail/${parsedInfo.mailUtilisateur}`).then(
+        axios.get(`https://mini-social-network.onrender.com/users/mail/${parsedInfo.mailUtilisateur}`).then(
             response => {setUser(response.data[0])}
         );
     },[]);
@@ -20,7 +20,7 @@ export default function CartePub({publication}) {
     const useQuery = useQueryClient();
     const mutation = useMutation({
         mutationFn: (id) => {
-            return axios.delete(`http://localhost:5555/publications/${id}`);
+            return axios.delete(`https://mini-social-network.onrender.com/publications/${id}`);
         },
         onError: (error) => {
             toast.error("Une erreur est survenue");
