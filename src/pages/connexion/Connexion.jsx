@@ -12,9 +12,7 @@ export default function Connexion() {
     const inscription = () =>{
         navigate("/inscription");
       }
-
-
-    const navigate = useNavigate();
+    
     useEffect(()=>{
         if(localStorage.getItem("utilisateur")){
             navigate("/")
