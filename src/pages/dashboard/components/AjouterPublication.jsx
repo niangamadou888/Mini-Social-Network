@@ -73,9 +73,7 @@ export default function AjouterPublication() {
             fullWidth
             size="small"
             type="text"
-            {...register("imagePublication", {
-              required: "Veuillez saisir une URL",
-            })}
+            {...register("imagePublication")}
           />
           <Button variant="contained" type="submit">Publier</Button>
         </Stack>
